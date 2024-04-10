@@ -11,7 +11,7 @@ export default function Error({
   return (
     <div>
       <h2>
-        Something went wrong in --- app/api/direct-messages
+        Something went wrong in --- hooks
         {error.message}
       </h2>
       <button onClick={() => reset()}>Try again</button>

@@ -3,7 +3,9 @@ import { redirect } from "next/navigation";
 
 import { db } from "@/lib/db";
 import { currentProfile } from "@/lib/current-profile";
+import { NavigationSidebar } from "@/components/navigation/navigation-sidebar";
 import { ServerSidebar } from "@/components/server/server-sidebar";
+//import { ServerSidebar } from "@/components/server/server-sidebar";
 
 const ServerIdLayout = async ({
   children,
@@ -34,7 +36,7 @@ const ServerIdLayout = async ({
   }
 
   return (
-    <div className="h-full">
+    <div className="h-full ">
       <div className="hidden md:flex h-full w-60 z-20 flex-col fixed inset-y-0">
         <ServerSidebar serverId={params.serverId} />
       </div>

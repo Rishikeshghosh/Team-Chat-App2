@@ -1,7 +1,6 @@
-import { NextResponse } from "next/server";
-
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
+import { NextResponse } from "next/server";
 
 export async function DELETE(
   req: Request,
@@ -17,7 +16,7 @@ export async function DELETE(
     const server = await db.server.delete({
       where: {
         id: params.serverId,
-        profileId: profile?.id,
+        profileId: profile.id,
       },
     });
 
@@ -43,7 +42,7 @@ export async function PATCH(
     const server = await db.server.update({
       where: {
         id: params.serverId,
-        profileId: profile?.id,
+        profileId: profile.id,
       },
       data: {
         name,
